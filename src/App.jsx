@@ -1,5 +1,6 @@
 import './App.css'
 import Product from "./product.jsx"
+import DisplayUserName from './activity.jsx';
 
 function ProductBox(){
   let array = ["amazon","flipkart","myntra"];
@@ -15,7 +16,9 @@ function ProductBox(){
 function App() {
   return(
     <>
-    <ProductBox></ProductBox>
+      <DisplayUserName user="rahul" color="red"></DisplayUserName>
+      <DisplayUserName user="udayan" color="blue"></DisplayUserName>
+      <ProductBox></ProductBox>
     </>
   )
 }
