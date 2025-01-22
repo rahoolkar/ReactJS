@@ -7,12 +7,16 @@ function Product(props){  //props is a js object that contains all the data that
     let items = props.array.map((Element)=>{ return <li>{Element}</li>});//rendering the array  
 
     let discount = props.price>30000 ? "discount of 5%" : null ;
+
+    let stylefordiv = {backgroundColor : "yellow",color : "green"}; //adding the color to the component 
+    
+    let stylefordiscount = { backgroundColor : props.price>30000 ? "orange" : ""};
     return (
-        <div className="Product">
+        <div className="Product" style={stylefordiv}>
             <h1>{props.title}</h1>
             <h3>{props.price}</h3>
             <ol>{items}</ol> 
-            {props.price>30000 ? <p>Discount of 5%</p> : null}  
+            {props.price>30000 ? <p style={stylefordiscount}>Discount of 5%</p> : null}  
         </div>
     );
 }
